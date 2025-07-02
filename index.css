@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(139, 50%, 45%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Arabic-specific colors for accounting system */
+  --primary-50: hsl(210, 100%, 95%);
+  --primary-100: hsl(212, 100%, 89%);
+  --primary-500: hsl(207, 90%, 54%);
+  --primary-600: hsl(210, 83%, 50%);
+  --primary-700: hsl(213, 87%, 36%);
+  
+  --secondary-50: hsl(140, 57%, 95%);
+  --secondary-100: hsl(142, 53%, 89%);
+  --secondary-500: hsl(139, 50%, 45%);
+  --secondary-600: hsl(138, 57%, 38%);
+  --secondary-700: hsl(139, 74%, 25%);
+  
+  /* Sidebar colors */
+  --sidebar-background: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(240, 5.3%, 26.1%);
+  --sidebar-primary: hsl(207, 90%, 54%);
+  --sidebar-primary-foreground: hsl(0, 0%, 98%);
+  --sidebar-accent: hsl(210, 40%, 96%);
+  --sidebar-accent-foreground: hsl(240, 5.9%, 10%);
+  --sidebar-border: hsl(220, 13%, 91%);
+  --sidebar-ring: hsl(217.2, 91.2%, 59.8%);
+  
+  /* Chart colors */
+  --chart-1: hsl(207, 90%, 54%);
+  --chart-2: hsl(139, 50%, 45%);
+  --chart-3: hsl(35, 91%, 51%);
+  --chart-4: hsl(280, 65%, 60%);
+  --chart-5: hsl(0, 0%, 38%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    direction: rtl;
+  }
+  
+  html {
+    direction: rtl;
+  }
+  
+  /* RTL-specific styles */
+  .rtl {
+    direction: rtl;
+  }
+  
+  /* Arabic number formatting */
+  .arabic-numerals {
+    unicode-bidi: bidi-override;
+    direction: ltr;
+  }
+}
+
+/* Custom Arabic styles */
+.font-arabic {
+  font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+/* RTL-specific utility classes */
+.mr-auto-rtl {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.ml-auto-rtl {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Custom components */
+.primary-gradient {
+  background: linear-gradient(135deg, hsl(207, 90%, 54%) 0%, hsl(210, 83%, 50%) 100%);
+}
+
+.secondary-gradient {
+  background: linear-gradient(135deg, hsl(139, 50%, 45%) 0%, hsl(138, 57%, 38%) 100%);
+}
+
+/* Chart.js RTL support */
+.chartjs-render-monitor {
+  direction: ltr;
+}
+
+/* Sidebar border for active items */
+.sidebar-active {
+  border-right: 3px solid hsl(207, 90%, 54%);
+  background-color: hsl(210, 100%, 95%);
+  color: hsl(207, 90%, 54%);
+}
+
+/* Custom scrollbar for RTL */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(60, 4.8%, 95.9%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(25, 5.3%, 44.7%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(20, 14.3%, 4.1%);
+}
+
+/* Form inputs RTL */
+input[type="number"] {
+  text-align: right;
+}
+
+.currency-input::after {
+  content: " ر.س";
+  color: hsl(25, 5.3%, 44.7%);
+}
+
+/* Status badges */
+.status-draft {
+  background-color: hsl(43, 96%, 90%);
+  color: hsl(35, 91%, 51%);
+}
+
+.status-sent {
+  background-color: hsl(210, 100%, 95%);
+  color: hsl(207, 90%, 54%);
+}
+
+.status-paid {
+  background-color: hsl(140, 57%, 95%);
+  color: hsl(139, 50%, 45%);
+}
+
+.status-overdue {
+  background-color: hsl(0, 100%, 95%);
+  color: hsl(0, 84.2%, 60.2%);
+}
