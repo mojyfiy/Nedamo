@@ -1,0 +1,7 @@
+Implement temporary login system with session management for testing
+
+Adds test authentication and session management using express-session and connect-pg-simple; disables invoice item validation.
+
+Replit-Commit-Author: Agent
+Replit-Commit-Session-Id: fc587c66-335f-4bc6-9005-5c3e559c462f
+Replit-Commit-Screenshot-Url: https://storage.googleapis.com/screenshot-production-us-central1/f8014a91-4200-4e1e-af79-d139173c62cc/71a806c2-88bb-48eb-89e7-b3a490305626.jpg

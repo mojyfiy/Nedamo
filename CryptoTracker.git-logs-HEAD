@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 857b1a12b5301f88f890ad8d343c3b3f50ee598f gaden20252025 <44492449-gaden20252025@users.noreply.replit.com> 1751387008 +0000	commit (initial): Initial commit
+857b1a12b5301f88f890ad8d343c3b3f50ee598f 628c46d7071be76f524212f27240b5b53c27b2a0 gaden20252025 <44492449-gaden20252025@users.noreply.replit.com> 1751387974 +0000	commit: Set up initial structure and core components for accounting system
+628c46d7071be76f524212f27240b5b53c27b2a0 651f4249b064046f09a9ae4204e09ee7cc3be948 gaden20252025 <44492449-gaden20252025@users.noreply.replit.com> 1751388391 +0000	commit: Implement temporary login system with session management for testing
